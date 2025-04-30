@@ -1,0 +1,21 @@
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Espacio entre las imágenes */
+    border: 5px solid blue; /* Marco azul alrededor de la galería */
+    padding: 10px; /* Espacio interno dentro del marco */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+}
+
+.galeria img {
+    width: 200px; /* Ancho fijo de cada imagen */
+    height: auto; /* La altura se ajusta proporcionalmente */
+    border: 2px solid #ccc; /* Un pequeño borde para cada imagen */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sutil sombra */
+    transition: transform 0.3s ease-in-out; /* Transición suave para la interactividad */
+}
+
+.galeria img:hover {
+    transform: scale(1.1); /* Escala ligeramente la imagen al pasar el ratón */
+    cursor: pointer; /* Cambia el cursor para indicar que es interactiva */
+}
