@@ -1,0 +1,57 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.carrusel-contenedor {
+    width: 80%;
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.carrusel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-track img {
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+}
+
+.botones {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px;
+}
+
+.botones button {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.botones button:hover {
+    opacity: 1;
+}
