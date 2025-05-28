@@ -1,0 +1,97 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0; /* Gris muy claro para el fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Para manejar el movimiento de las tarjetas */
+}
+
+.container {
+    background-color: #ffffff; /* Blanco para el contenedor principal */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center;
+    max-width: 900px;
+    width: 90%;
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    color: #333333; /* Gris oscuro para el título */
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+#card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    perspective: 1000px; /* Para efectos 3D */
+    min-height: 300px; /* Asegura espacio para las tarjetas */
+}
+
+.card {
+    background-color: #e0e0e0; /* Gris medio para las tarjetas */
+    color: #333333;
+    padding: 25px;
+    border-radius: 12px;
+    width: 220px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease-out, background-color 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    font-size: 1.1em;
+}
+
+.card:hover {
+    background-color: #d0d0d0; /* Gris ligeramente más oscuro al pasar el mouse */
+    transform: translateY(-10px) rotateX(5deg); /* Efecto flotante y de rotación */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card.hidden {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.card.active {
+    background-color: #a0a0a0; /* Gris más oscuro cuando está activo/seleccionado */
+    color: #ffffff; /* Texto blanco para contraste */
+}
+
+.action-button {
+    background-color: #606060; /* Gris oscuro para los botones */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.action-button:hover {
+    background-color: #404040; /* Gris aún más oscuro al pasar el mouse */
+    transform: translateY(-2px);
+}
+
+#reset-button {
+    display: none; /* Se mostrará con JavaScript */
+}
